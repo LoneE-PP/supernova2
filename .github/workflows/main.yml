@@ -51,40 +51,38 @@ jobs:
           FIGMA_NODE_ID: 103:2029
         run: |
           echo "const tokens = require('./test2/tokens.json');" > update-figma-tokens.js  
-          echo "$(cat << 'EOF'  
-
-          const fetch = require('node-fetch');  
+          echo "const fetch = require('node-fetch');" >> update-figma-tokens.js  
+          cat << 'EOF' >> update-figma-tokens.js  
 
           async function updateFigmaTokens(tokens) {  
-            const headers = {  
-              'Content-Type': 'application/json',  
-              'X-Figma-Token': process.env.FIGMA_API_TOKEN,  
-            };  
+          const headers = {  
+          'Content-Type': 'application/json',  
+          'X-Figma-Token': process.env.FIGMA_API_TOKEN,  
+           };  
 
-            const newNodeProperties = {  
-              properties: {  
-                style: {  
-                  fills: tokens.fill,  
-                  strokes: tokens.stroke,  
-                },  
-              },  
-            };  
+          const newNodeProperties = {  
+          properties: {  
+          style: {  
+            fills: tokens.fill,  
+            strokes: tokens.stroke,  
+          },  
+          },  
+          };  
 
-            const updateResponse = await fetch(`https://api.figma.com/v1/files/${process.env.FIGMA_FILE_ID}/nodes`, {  
-              method: 'POST',  
-              headers,  
-              body: JSON.stringify({  
-                nodes: {  
-                  [process.env.FIGMA_NODE_ID]: newNodeProperties,  
-                },  
-              }),  
-            });  
+          const updateResponse = await fetch(`https://api.figma.com/v1/files/${process.env.FIGMA_FILE_ID}/nodes`, {  
+          method: 'POST',  
+          headers,  
+          body: JSON.stringify({  
+          nodes: {  
+            [process.env.FIGMA_NODE_ID]: newNodeProperties,  
+          },  
+          }),  
+          });  
 
-            const updateData = await updateResponse.json();  
-            console.log(updateData);  
+          const updateData = await updateResponse.json();  
+          console.log(updateData);  
           }  
 
           updateFigmaTokens(tokens);  
           EOF  
-          )" >> update-figma-tokens.js  
           node update-figma-tokens.js
