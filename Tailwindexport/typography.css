@@ -3,50 +3,363 @@
 @layer utilities {
    
   .typography-desktop-h3-regular {
-    font-family: "Maison Neue Extended";
+    font-family: "{fontFamilies.maison-neue-extended}";
     font-style: normal;
     font-weight: 400;
     font-size: 26px;
+    line-height: 0px;
     letter-spacing: 0em;
     text-indent: 0px;
   } 
 
    
   .typography-desktop-h3-bold {
-    font-family: "Maison Neue Extended";
+    font-family: "{fontFamilies.maison-neue-extended}";
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 26px;
+    line-height: 0px;
     letter-spacing: 0em;
     text-indent: 0px;
   } 
 
    
   .typography-desktop-h4-regular {
-    font-family: "Maison Neue";
+    font-family: "{fontFamilies.maison-neue}";
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
+    line-height: 0px;
     letter-spacing: 0em;
     text-indent: 0px;
   } 
 
    
   .typography-desktop-h4-bold {
-    font-family: "Maison Neue";
+    font-family: "{fontFamilies.maison-neue}";
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 18px;
+    line-height: 0px;
     letter-spacing: 0em;
     text-indent: 0px;
   } 
 
    
   .typography-desktop-h5-regular {
-    font-family: "Maison Neue";
+    font-family: "{fontFamilies.maison-neue}";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
+    line-height: 0px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+  /* Mengdedekst */ 
+  .typography-mengdetekst {
+    font-family: "{fontFamilies.maison-neue}";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 0px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-phone-h5-regular {
+    font-family: "{fontFamilies.maison-neue}";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 0px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-phone-h5-bold {
+    font-family: "{fontFamilies.maison-neue}";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 0px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-phone-h4-bold {
+    font-family: "{fontFamilies.maison-neue}";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 0px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-phone-h4-regular {
+    font-family: "{fontFamilies.maison-neue}";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 0px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-phone-h3-regular {
+    font-family: "{fontFamilies.maison-neue-extended}";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 0px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-phone-h3-bold {
+    font-family: "{fontFamilies.maison-neue-extended}";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 0px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-phone-h2-bold {
+    font-family: "{fontFamilies.maison-neue-extended}";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 0px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-phone-h2-regular {
+    font-family: "{fontFamilies.maison-neue-extended}";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 0px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-phone-h1-regular {
+    font-family: "{fontFamilies.maison-neue-extended}";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 0px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-phone-h1-bold {
+    font-family: "{fontFamilies.maison-neue-extended}";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 0px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-tablet-h1-regular {
+    font-family: "{fontFamilies.maison-neue-extended}";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 0px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-tablet-h1-bold {
+    font-family: "{fontFamilies.maison-neue-extended}";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 0px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-tablet-h2-regular {
+    font-family: "{fontFamilies.maison-neue-extended}";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 0px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-tablet-h2-bold {
+    font-family: "{fontFamilies.maison-neue-extended}";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 0px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-tablet-h3-regular {
+    font-family: "{fontFamilies.maison-neue-extended}";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 0px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-tablet-h3-bold {
+    font-family: "{fontFamilies.maison-neue-extended}";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 0px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-tablet-h4-regular {
+    font-family: "{fontFamilies.maison-neue}";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 0px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-tablet-h4-bold {
+    font-family: "{fontFamilies.maison-neue}";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 0px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-tablet-h5-regular {
+    font-family: "{fontFamilies.maison-neue}";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 0px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-tablet-h5-bold {
+    font-family: "{fontFamilies.maison-neue}";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 0px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-tablet-h6-regular {
+    font-family: "{fontFamilies.maison-neue-extended}";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 0px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-desktop-h1-regular {
+    font-family: "{fontFamilies.maison-neue-extended}";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 0px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-desktop-h1-bold {
+    font-family: "{fontFamilies.maison-neue-extended}";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 0px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-desktop-h2-regular {
+    font-family: "{fontFamilies.maison-neue-extended}";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 0px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-desktop-h2-bold {
+    font-family: "{fontFamilies.maison-neue-extended}";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 0px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-desktop-h5-bold {
+    font-family: "{fontFamilies.maison-neue}";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 0px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-desktop-h6-regular {
+    font-family: "{fontFamilies.maison-neue-extended}";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 0px;
     letter-spacing: 0em;
     text-indent: 0px;
   } 

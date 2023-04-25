@@ -1,3 +1,16 @@
 
 :root {
+    --measure-line-height-lineheights-0: 0px;     
+    --measure-font-size-fontsize-0: 14px;     
+    --measure-font-size-fontsize-1: 16px;     
+    --measure-font-size-fontsize-2: 18px;     
+    --measure-font-size-fontsize-3: 20px;     
+    --measure-font-size-fontsize-4: 22px;     
+    --measure-font-size-fontsize-5: 26px;     
+    --measure-font-size-fontsize-6: 42px;     
+    --measure-font-size-fontsize-7: 70px;     
+    --measure-font-size-fontsize-8: 100px;     
+    --measure-letter-spacing-letterspacing-0: 0%;     
+    --measure-paragraph-spacing-paragraphspacing-0: 0px;     
+    --measure-dimension-paragraphindent-0: 0px;     
 }

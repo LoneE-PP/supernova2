@@ -2,6 +2,8 @@ module.exports = {
     'colors': {
         'black-#000000': '#000000', 
         'white-#ffffff': '#ffffff', 
+        'test': '#954646', 
+        'testtoken-#1': '#923737', 
         'grey': {
             '900-#191919': '#191919', 
             '700-#333333': '#333333', 
