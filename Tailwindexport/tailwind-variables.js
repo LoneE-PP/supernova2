@@ -3,6 +3,7 @@ module.exports = {
         'black-#000000': '#000000', 
         'white-#ffffff': '#ffffff', 
         'test': '#954646', 
+        'test3': '#154646', 
         'nytest': '#d5771f', 
         'grey': {
             '900-#191919': '#191919', 
