@@ -2,25 +2,16 @@
 
 name: CI
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [main]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $github.workspace, so your job can access it
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
@@ -32,12 +23,11 @@ jobs:
         env:
           cache-name: cache-node-modules
         with:
-          # npm cache files are stored in `~/.npm` on Linux/macOS
           path: ~/.npm
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
+            ${{ runner.os }}-build-${{ env.cache-name }}-  
+            ${{ runner.os }}-build-  
             ${{ runner.os }}-
 
       - name: Install Supernova CLI dependency
@@ -45,50 +35,56 @@ jobs:
 
       - name: Synchronize tokens with Supernova
         run: >
-          supernova sync-tokens 
-          --apiKey="${{ secrets.SN_ACCESS_TOKEN_PROD }}"
-          --designSystemId="27928" 
-          --tokenFilePath "${{ github.workspace }}/test2/tokens.json" 
+          supernova sync-tokens  
+          --apiKey="${{ secrets.SN_ACCESS_TOKEN_PROD }}"  
+          --designSystemId="27928"  
+          --tokenFilePath "${{ github.workspace }}/test2/tokens.json"  
           --configFilePath "${{ github.workspace }}/test2/supernova.settings.json"
 
-      - name: Install figma-js and other dependencies
-        run: npm install figma-js axios
+      - name: Install Figma CLI plugin
+        run: npm install -g figma-cli
 
-      - name: Synchronize tokens with Figma
+      - name: Update Figma tokens
         env:
           FIGMA_API_TOKEN: ${{ secrets.FIGMA_API_TOKEN }}
           FIGMA_FILE_ID: tbDiPqorupbdNXoCXMEn2A
           FIGMA_NODE_ID: 103:2029
         run: |
-          # Create a script to fetch design tokens from Figma  
-          echo 'const fs = require("fs");  
-          const axios = require("axios");  
-          const Figma = require("figma-js");  
+          echo "const tokens = require('./test2/tokens.json');" > update-figma-tokens.js  
+          echo "$(cat << 'EOF'  
 
-          async function fetchTokens() {  
-          const client = Figma.Client({  
-            personalAccessToken: process.env.FIGMA_API_TOKEN,  
-          });  
+          const fetch = require('node-fetch');  
 
-          try {  
-            const file = await client.file(process.env.FIGMA_FILE_ID);  
-            const nodeId = process.env.FIGMA_NODE_ID;  
-            const exportUrl = file.data.export_url;  
+          async function updateFigmaTokens(tokens) {  
+            const headers = {  
+              'Content-Type': 'application/json',  
+              'X-Figma-Token': process.env.FIGMA_API_TOKEN,  
+            };  
 
-            const response = await axios.get(exportUrl, {  
-            headers: { "X-FIGMA-TOKEN": process.env.FIGMA_API_TOKEN },  
+            const newNodeProperties = {  
+              properties: {  
+                style: {  
+                  fills: tokens.fill,  
+                  strokes: tokens.stroke,  
+                },  
+              },  
+            };  
+
+            const updateResponse = await fetch(`https://api.figma.com/v1/files/${process.env.FIGMA_FILE_ID}/nodes`, {  
+              method: 'POST',  
+              headers,  
+              body: JSON.stringify({  
+                nodes: {  
+                  [process.env.FIGMA_NODE_ID]: newNodeProperties,  
+                },  
+              }),  
             });  
 
-          const tokens = response.data.nodes[nodeId].document.children[0].characters;  
-
-          fs.writeFileSync("test2/tokens.json", tokens);  
-          } catch (error) {  
-          console.error("Error fetching tokens:", error);  
-          process.exit(1);  
-           }  
+            const updateData = await updateResponse.json();  
+            console.log(updateData);  
           }  
 
-          fetchTokens();' > fetch-figma-tokens.js  
-
-          # Run the script to fetch design tokens from Figma  
-           node fetch-figma-tokens.js
+          updateFigmaTokens(tokens);  
+          EOF  
+          )" >> update-figma-tokens.js  
+          node update-figma-tokens.js
