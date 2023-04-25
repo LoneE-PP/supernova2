@@ -1,18 +1,15 @@
 {
-    "mode": "single-file",
-    "mapping": [{
-            "tokenSets": ["core", "light"],
-            "supernovaBrand": "Default",
-            "supernovaTheme": null
-        }, {
-            "tokenSets": ["core", "dark"],
-            "supernovaBrand": "Default",
-            "supernovaTheme": "Dark"
-        }
-    ],
-    "settings": {
-        "dryRun": false,
-        "verbose": true,
-        "preciseCopy": false
+  "mode": "single-file",
+  "mapping": [
+    {
+      "tokenSets": ["core"],
+      "supernovaBrand": "Default",
+      "supernovaTheme": null
     }
+  ],
+  "settings": {
+    "dryRun": false,
+    "verbose": true,
+    "preciseCopy": false
+  }
 }
