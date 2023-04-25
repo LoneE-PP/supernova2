@@ -5,6 +5,7 @@ module.exports = {
         'test': '#954646',
         'testtoken-#1': '#923737',
         'test2': '#aabbcc',
+        'testtoken-#2': '#aabbcc',
     },
     
         'grey': {
