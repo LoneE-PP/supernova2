@@ -6,7 +6,7 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [main]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -25,7 +25,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 14
-          
+
       - name: Cache node modules
         id: cache-npm
         uses: actions/cache@v3
@@ -39,15 +39,14 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-         
+
       - name: Install Supernova CLI dependency
         run: npm install --g @supernovaio/cli
 
-      - name: Synchronize tokens with Supernova 
+      - name: Synchronize tokens with Supernova
         run: >
           supernova sync-tokens 
           --apiKey="${{ secrets.SN_ACCESS_TOKEN_PROD }}"
-          --designSystemId="15505" 
+          --designSystemId="27928" 
           --tokenFilePath "${{ github.workspace }}/test2/tokens.json" 
           --configFilePath "${{ github.workspace }}/test2/supernova.settings.json"
-             
