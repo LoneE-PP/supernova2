@@ -1,0 +1,30 @@
+
+:root {
+    --color-black-000000: #000000; 
+    --color-white-ffffff: #ffffff; 
+    --color-grey-900-191919: #191919; 
+    --color-grey-700-333333: #333333; 
+    --color-grey-500-7f7f7f: #7f7f7f; 
+    --color-grey-300-cccccc: #cccccc; 
+    --color-grey-100-ebebeb: #ebebeb; 
+    --color-green-earth-354c39: #354c39; 
+    --color-green-primary-cfe548: #cfe548; 
+    --color-green-tint-f0ff99: #f0ff99; 
+    --color-green-pastell-f4f-ce: #f4f4ce; 
+    --color-green-neutral-ccccco: #ccccc0; 
+    --color-purple-earth-3a364c: #3a364c; 
+    --color-purple-primary-7546e8: #7546e8; 
+    --color-purple-tint-9e99ff: #9e99ff; 
+    --color-purple-pastell-cecef2: #cecef2; 
+    --color-purple-neutral-c2c2cc: #c2c2cc; 
+    --color-blue-earth-354349: #354349; 
+    --color-blue-primary-48b1e5: #48b1e5; 
+    --color-blue-tint-99e2ff: #99e2ff; 
+    --color-blue-pastell-cee6ef: #cee6ef; 
+    --color-blue-neutral-c4cacc: #c4cacc; 
+    --color-orange-earth-4c4636: #4c4636; 
+    --color-orange-primary-e08e4b: #e08e4b; 
+    --color-orange-tint-ffc799: #ffc799; 
+    --color-orange-pastell-eddcce: #eddcce; 
+    --color-orange-neutral-cccac8: #cccac8; 
+}

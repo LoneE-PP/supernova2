@@ -1,0 +1,55 @@
+@tailwind utilities;
+
+@layer utilities {
+   
+  .typography-desktop-h3-regular {
+    font-family: "Maison Neue Extended";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-desktop-h3-bold {
+    font-family: "Maison Neue Extended";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-desktop-h4-regular {
+    font-family: "Maison Neue";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-desktop-h4-bold {
+    font-family: "Maison Neue";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+   
+  .typography-desktop-h5-regular {
+    font-family: "Maison Neue";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0em;
+    text-indent: 0px;
+  } 
+
+
+}

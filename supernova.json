@@ -1,0 +1,14 @@
+{
+  "workspaceId": "24852",
+  "designSystemId": "27928",
+  "designSystemVersionId": "29133",
+  "brandId": "f19e3180-252c-48af-a054-900e42334d27",
+  "themeId": null,
+  "exporterId": null,
+  "workspaceName": "Prosesspilotene",
+  "designSystemName": "My test Design System",
+  "designSystemVersionName": "Shared draft",
+  "exporterName": "Don't apply theme",
+  "write_to": "tailwind",
+  "description": "Note to our fellow developers: Install Supernova integration from the VSCode marketplace and then our  Don't apply theme exporter will synchronize design data and generate appropriate code from the  Shared draft design system every time you request it through the extension interface, fully automatically."
+}
