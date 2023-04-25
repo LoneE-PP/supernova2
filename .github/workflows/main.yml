@@ -50,3 +50,16 @@ jobs:
           --designSystemId="27928" 
           --tokenFilePath "${{ github.workspace }}/test2/tokens.json" 
           --configFilePath "${{ github.workspace }}/test2/supernova.settings.json"
+
+      - name: Install figma-export
+        run: npm install --g figma-export
+
+      - name: Synchronize tokens with Figma
+        env:
+          FIGMA_API_TOKEN: ${{ secrets.FIGMA_API_TOKEN }}
+          FIGMA_FILE_ID: your-figma-file-id
+        run: |
+          # Export design tokens from Figma using figma-export  
+          figma-export tokens $FIGMA_FILE_ID \  
+           --token $FIGMA_API_TOKEN \  
+           --output test2/tokens.json
