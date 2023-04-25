@@ -57,8 +57,8 @@ jobs:
       - name: Synchronize tokens with Figma
         env:
           FIGMA_API_TOKEN: ${{ secrets.FIGMA_API_TOKEN }}
-          FIGMA_FILE_ID: your-figma-file-id
-          FIGMA_NODE_ID: your-figma-node-id
+          FIGMA_FILE_ID: tbDiPqorupbdNXoCXMEn2A
+          FIGMA_NODE_ID: 103:2029
         run: |
           # Create a script to fetch design tokens from Figma  
           echo 'const fs = require("fs");  
